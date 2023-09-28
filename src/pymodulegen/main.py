@@ -128,6 +128,18 @@ if __name__ == '__main__':
 
 
 # Example usage:
-# generate_module("chatgpt","app/api/v1/endpoints",is_module_only=False)
-# generate_module("somemod","app/api")
+
+#Generate a module named "mymodule" in the current directory (default settings):
+#python main.py modulegen mymodule
+
+#Generate a module named "chatgpt" in the "app/api/v1/endpoints" directory with root directory "mychatbot" and use it as a main program as well:
+#python main.py modulegen chatgpt --directory "app/api/v1/endpoints" --root_directory "mychatbot" --not_is_module_only
+
+#Generate a package (with __init__.py) named "my_package" in the current directory (default settings) with a module my_module:
+#python main.py modulegen my_module --directory "my_package"
+
+
+
+
+
 
