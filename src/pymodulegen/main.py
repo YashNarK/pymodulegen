@@ -1,5 +1,6 @@
 import os
 import sys
+import argparse
 
 
 
@@ -66,8 +67,7 @@ def generate_module(module_name,directory=".",root_directory=(os.getcwd().split(
             init_file = os.path.join(current_path, "__init__.py")
             if not os.path.exists(init_file):
                 with open(init_file, "w") as f:
-                    f.write(f"""#adding the root directory to sys path
-{set_root_directory(root_directory)}""") 
+                    f.write(f"""#adding the root directory to sys path\n{set_root_directory(root_directory)}""") 
 
         # Create the module file with the specified name
         module_file = os.path.join(current_path, f"{module_name}.py")
@@ -86,7 +86,7 @@ def generate_module(module_name,directory=".",root_directory=(os.getcwd().split(
                     #If module is set to be used as main as well, then root directory must be added to sys path
                     #explicitly in the module itself to avoid any errors while importing
                     else:
-                        f.write(f"""#adding the root directory to sys path\n{set_root_directory(root_directory)}\n#Add remaining imports below\n\n\n\nif __name__=='__main__':\n\t#Your Main code here""") 
+                        f.write(f"""#adding the root directory to sys path\n{set_root_directory(root_directory)}\n#Add remaining imports below\n\n\n\nif __name__=='__main__':\n\t'Your Main code here'""") 
                 
                 #If no directory is given as input, it is a single module in root folder. 
                 #Hence, no need to handle parent module import issue
@@ -99,11 +99,35 @@ def generate_module(module_name,directory=".",root_directory=(os.getcwd().split(
         print(e)
 
 
+def main():
+    parser = argparse.ArgumentParser(description="""Generate a module and __init__.py (in case of package) files in the specified directory. Enable parent module imports using absolute paths (from root dir).""")
+    subparsers = parser.add_subparsers(title="subcommands",dest="subcommand")
+    # Create a subcommand for generating modules
+    generate_parser = subparsers.add_parser("modulegen", help="Generate a module")
+    generate_parser.add_argument("module_name", help="Name of the module to generate")
+    generate_parser.add_argument("--directory", default=".", help="Directory where the module should be created")
+    generate_parser.add_argument("--root_directory", default=None, help="The root directory for sys.path. (Default:current folder)")
+   
+    # Use store_true action for --is_module_only to accept True as the default value
+    generate_parser.add_argument("--is_module_only", default=True, action="store_true", help="Specify if the module should be used as a module only")
 
+    # Add --no-is_module_only flag to set is_module_only to False
+    generate_parser.add_argument("--not_is_module_only", dest="is_module_only", action="store_false", help="Specify if the module should be used as a main program as well")
+
+    args = parser.parse_args()
+
+    if args.subcommand == "modulegen":
+        # Check for None values and apply defaults
+        root_directory = args.root_directory if args.root_directory is not None else (os.getcwd().split(os.sep))[-1]
+        generate_module(args.module_name, args.directory, root_directory, args.is_module_only)
+
+
+if __name__ == '__main__':
+    main()
 
 
 
 # Example usage:
-generate_module("chatgpt","app/api/v1/endpoints",is_module_only=False)
-generate_module("somemod","app/api")
+# generate_module("chatgpt","app/api/v1/endpoints",is_module_only=False)
+# generate_module("somemod","app/api")
 
