@@ -6,13 +6,11 @@
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
 - [Command-Line Interface](#command-line-interface)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgments)
 - [Contact](#contact)
-- [Examples and Screenshots](#examples-and-screenshots)
 
 
 ## Description
@@ -28,14 +26,10 @@ pymodulegen is a project aimed to generate python modules and packages, and add 
 
 2. Navigate to the project directory:
    ```bash
-   cd src\pymodulegen
+   cd pymodulegen\src\pymodulegen
    ```
 
 
-
-## Usage
-
-Explain how to use your project and provide code examples, screenshots, or GIFs if applicable.
 
 ## Command-Line Interface
 
@@ -52,10 +46,6 @@ Options:
 - `--directory`: (Optional) The directory where the module should be created.
 - `--root_directory`: (Optional) The root directory for sys.path.
 - `--is_module_only`: (Optional) Specify if the module should be used as a module only.
-
-### Other CLI Commands
-
-Provide documentation for other CLI commands if your project has them.
 
 ## Contributing
 
@@ -82,21 +72,4 @@ I would like to acknowledge the following resources that were helpful during the
 - Email: narenkrithick@gmail.com
 - GitHub: [YashNarK](https://github.com/YashNarK)
 
-
-
-## Examples and Screenshots
-
-Include examples, screenshots, or GIFs of your project in action to showcase its features.
-
-### Example 1
-
-[![Screenshot 1](images/screenshot1.png)](images/screenshot1.png)
-
-Description of example 1.
-
-### Example 2
-
-[![Screenshot 2](images/screenshot2.png)](images/screenshot2.png)
-
-Description of example 2.
 
