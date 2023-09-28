@@ -101,9 +101,6 @@ def generate_module(module_name,directory=".",root_directory=(os.getcwd().split(
 
 def main():
     parser = argparse.ArgumentParser(description="""Generate a module and __init__.py (in case of package) files in the specified directory. Enable parent module imports using absolute paths (from root dir).""")
-    # subparsers = parser.add_subparsers(title="subcommands",dest="subcommand")
-    # Create a subcommand for generating modules
-    # generate_parser = subparsers.add_parser("modulegen", help="Generate a module or package")
     parser.add_argument("module_name", help="Name of the module to generate")
     parser.add_argument("--directory", default=".", help="Directory where the module should be created")
     parser.add_argument("--root_directory", default=None, help="The root directory for sys.path. (Default:current folder)")
@@ -116,10 +113,10 @@ def main():
 
     args = parser.parse_args()
 
-    if args.subcommand == "modulegen":
-        # Check for None values and apply defaults
-        root_directory = args.root_directory if args.root_directory is not None else (os.getcwd().split(os.sep))[-1]
-        generate_module(args.module_name, args.directory, root_directory, args.is_module_only)
+    
+    # Check for None values and apply defaults
+    root_directory = args.root_directory if args.root_directory is not None else (os.getcwd().split(os.sep))[-1]
+    generate_module(args.module_name, args.directory, root_directory, args.is_module_only)
 
 
 if __name__ == '__main__':
@@ -130,13 +127,13 @@ if __name__ == '__main__':
 # Example usage:
 
 #Generate a module named "mymodule" in the current directory (default settings):
-#python main.py modulegen mymodule
+#pymodulegen mymodule
 
-#Generate a module named "chatgpt" in the "app/api/v1/endpoints" directory with root directory "mychatbot" and use it as a main program as well:
-#python main.py modulegen chatgpt --directory "app/api/v1/endpoints" --root_directory "mychatbot" --not_is_module_only
+#Generate a module named "chatgpt" in the "app/api/v1/endpoints" directory with root directory "project-root" and use it as a main program as well:
+#pymodulegen chatgpt --directory "app/api/v1/endpoints" --root_directory "project-root" --not_is_module_only
 
 #Generate a package (with __init__.py) named "my_package" in the current directory (default settings) with a module my_module:
-#python main.py modulegen my_module --directory "my_package"
+#pymodulegen my_module --directory "my_package"
 
 
 

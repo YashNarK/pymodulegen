@@ -1,16 +1,17 @@
 # pymodulegen
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://example.com/build)
-[![Version](https://img.shields.io/badge/version-0.0.3-blue)](https://github.com/YashNarK/pymodulegen/releases)
+[![Version](https://img.shields.io/badge/version-0.0.4-blue)](https://github.com/YashNarK/pymodulegen/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## Table of Contents
 - [Installation](#installation)
-- [Command-Line Interface](#command-line-interface)
+- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgments)
 - [Contact](#contact)
+- [Examples and Screenshots](#examples-and-screenshots)
 
 
 ## Description
@@ -19,26 +20,21 @@ pymodulegen is a project aimed to generate python modules and packages, and add 
 
 ## Installation
 
-1. Clone the repository:
+### Using pip
+   ```bash
+   pip install pymodulegen
+   ```
+### Clone from source
    ```bash
    git clone https://github.com/YashNarK/pymodulegen.git
    ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd pymodulegen\src\pymodulegen
-   ```
 
-
-
-## Command-Line Interface
-
-### Generate Module
-
-To generate a module, use the following command:
+## Usage
+To generate a module or package and set root directory, use the following command:
 
 ```bash
-python main.py modulegen module_name [--options]
+pymodulegen module_name [--options]
 ```
 
 Options:
@@ -72,4 +68,23 @@ I would like to acknowledge the following resources that were helpful during the
 - Email: narenkrithick@gmail.com
 - GitHub: [YashNarK](https://github.com/YashNarK)
 
+## Examples and Screenshots
+
+### Example 1
+
+[![Screenshot 1](images/screenshot1.png)](images/screenshot1.png)
+
+Generate a module named "mymodule" in the current directory (default settings).
+
+### Example 2
+
+[![Screenshot 2](images/screenshot2.png)](images/screenshot2.png)
+
+Generate a module named "chatgpt" in the "app/api/v1/endpoints" directory with root directory "project-root" and use it as a main program as well.
+
+### Example 3
+
+[![Screenshot 3](images/screenshot3.png)](images/screenshot3.png)
+
+Generate a package (with __init__.py) named "my_package" in the current directory (default settings) with a module my_module.
 
