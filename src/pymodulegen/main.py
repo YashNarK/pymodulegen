@@ -103,7 +103,7 @@ def main():
     parser = argparse.ArgumentParser(description="""Generate a module and __init__.py (in case of package) files in the specified directory. Enable parent module imports using absolute paths (from root dir).""")
     subparsers = parser.add_subparsers(title="subcommands",dest="subcommand")
     # Create a subcommand for generating modules
-    generate_parser = subparsers.add_parser("modulegen", help="Generate a module")
+    generate_parser = subparsers.add_parser("modulegen", help="Generate a module or package")
     generate_parser.add_argument("module_name", help="Name of the module to generate")
     generate_parser.add_argument("--directory", default=".", help="Directory where the module should be created")
     generate_parser.add_argument("--root_directory", default=None, help="The root directory for sys.path. (Default:current folder)")
