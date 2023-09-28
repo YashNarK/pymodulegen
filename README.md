@@ -10,6 +10,10 @@
 - [Command-Line Interface](#command-line-interface)
 - [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgements](#acknowledgments)
+- [Contact](#contact)
+- [Examples and Screenshots](#examples-and-screenshots)
+
 
 ## Description
 
@@ -68,20 +72,31 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- Mention any contributors, libraries, or resources that helped you in building your project.
+I would like to acknowledge the following resources that were helpful during the development of this project:
+
+- [GeeksforGeeks - Python Import from Parent Directory](https://www.geeksforgeeks.org/python-import-from-parent-directory/): This tutorial provided valuable insights into importing modules from parent directories in Python. It was a useful reference while working on this project.
+
 
 ## Contact
 
-- Email: your.email@example.com
-- GitHub: [yourusername](https://github.com/yourusername)
+- Email: narenkrithick@gmail.com
+- GitHub: [YashNarK](https://github.com/YashNarK)
 
-## Additional Sections
 
-Add any additional sections relevant to your project, such as "Troubleshooting," "Changelog," "Demo," etc.
 
 ## Examples and Screenshots
 
 Include examples, screenshots, or GIFs of your project in action to showcase its features.
-```
 
-Feel free to copy and paste this template into your README.md file and customize it according to your project's details.
+### Example 1
+
+[![Screenshot 1](images/screenshot1.png)](images/screenshot1.png)
+
+Description of example 1.
+
+### Example 2
+
+[![Screenshot 2](images/screenshot2.png)](images/screenshot2.png)
+
+Description of example 2.
+
