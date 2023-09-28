@@ -1,7 +1,7 @@
 # pymodulegen
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://example.com/build)
-[![Version](https://img.shields.io/badge/version-0.0.1-blue)](https://github.com/YashNarK/pymodulegen/releases)
+[![Version](https://img.shields.io/badge/version-0.0.3-blue)](https://github.com/YashNarK/pymodulegen/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## Table of Contents

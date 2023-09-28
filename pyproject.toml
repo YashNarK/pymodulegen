@@ -2,14 +2,14 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.poetry]
+[project]
 name = "pymodulegen"
-version = "0.0.1"
-description = "Generate module and __init__.py (in case of package) files in the specified directory. Set root directory and add root directory path to sys path so that absolute path imports will work even in child modules."
-readme = "README.md"
+version = "0.0.3"
 authors = [
-  { name = "Narendran A I", email = "narenkrithick@gmail.com" },
+  { name="Narendran A I", email="narenkrithick@gmail.com" },
 ]
+description = " Generate module and __init__.py (in case of package) files in the specified directory. Set root directory and add root directory path to sys path so that absolute path imports will work even in child modules."
+readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -17,15 +17,9 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+[project.scripts]
+pymodulegen = "pymodulegen:__main__.main"
 
-[tool.poetry.scripts]
-pymodulegen = "pymodulegen.__main__:main"
-
-[entry-points]
-console_scripts = ["pymodulegen = pymodulegen.__main__:main"]
 
 [project.urls]
 "Homepage" = "https://github.com/YashNarK/pymodulegen"

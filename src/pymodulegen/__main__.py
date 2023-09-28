@@ -101,18 +101,18 @@ def generate_module(module_name,directory=".",root_directory=(os.getcwd().split(
 
 def main():
     parser = argparse.ArgumentParser(description="""Generate a module and __init__.py (in case of package) files in the specified directory. Enable parent module imports using absolute paths (from root dir).""")
-    subparsers = parser.add_subparsers(title="subcommands",dest="subcommand")
+    # subparsers = parser.add_subparsers(title="subcommands",dest="subcommand")
     # Create a subcommand for generating modules
-    generate_parser = subparsers.add_parser("modulegen", help="Generate a module or package")
-    generate_parser.add_argument("module_name", help="Name of the module to generate")
-    generate_parser.add_argument("--directory", default=".", help="Directory where the module should be created")
-    generate_parser.add_argument("--root_directory", default=None, help="The root directory for sys.path. (Default:current folder)")
+    # generate_parser = subparsers.add_parser("modulegen", help="Generate a module or package")
+    parser.add_argument("module_name", help="Name of the module to generate")
+    parser.add_argument("--directory", default=".", help="Directory where the module should be created")
+    parser.add_argument("--root_directory", default=None, help="The root directory for sys.path. (Default:current folder)")
    
     # Use store_true action for --is_module_only to accept True as the default value
-    generate_parser.add_argument("--is_module_only", default=True, action="store_true", help="Specify if the module should be used as a module only")
+    parser.add_argument("--is_module_only", default=True, action="store_true", help="Specify if the module should be used as a module only")
 
     # Add --no-is_module_only flag to set is_module_only to False
-    generate_parser.add_argument("--not_is_module_only", dest="is_module_only", action="store_false", help="Specify if the module should be used as a main program as well")
+    parser.add_argument("--not_is_module_only", dest="is_module_only", action="store_false", help="Specify if the module should be used as a main program as well")
 
     args = parser.parse_args()
 
