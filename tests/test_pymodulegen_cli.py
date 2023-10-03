@@ -45,6 +45,8 @@ class TestPymodulegenCLI(unittest.TestCase):
         To create a package api in the root directory with __init__.py file.
         And create a module authentication.py under api package and the content must be empty as the --is_module_only flag is provided
         """
+        #print current working directory
+        print(os.getcwd())
         # Define the command to run
         cmd = ['python', 'src\pymodulegen\__main__.py', 'authentication','--directory','api','--is_module_only']
 
