@@ -1,6 +1,6 @@
 # pymodulegen
 [![Python unittests](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml/badge.svg)](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml)
-[![Version](https://img.shields.io/badge/version-0.0.5-blue)](https://github.com/YashNarK/pymodulegen/releases)
+[![Version](https://img.shields.io/badge/version-0.0.6-blue)](https://github.com/YashNarK/pymodulegen/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## Table of Contents
@@ -72,19 +72,19 @@ I would like to acknowledge the following resources that were helpful during the
 
 ### Example 1
 
-[![Screenshot 1](images/screenshot1.png)](images/screenshot1.png)
+[![Screenshot 1](https://raw.githubusercontent.com/YashNarK/pymodulegen/main/images/screenshot1.png)](https://raw.githubusercontent.com/YashNarK/pymodulegen/main/images/screenshot1.png)
 
 Generate a module named "mymodule" in the current directory (default settings).
 
 ### Example 2
 
-[![Screenshot 2](images/screenshot2.png)](images/screenshot2.png)
+[![Screenshot 2](https://raw.githubusercontent.com/YashNarK/pymodulegen/main/images/screenshot2.png)](https://raw.githubusercontent.com/YashNarK/pymodulegen/main/images/screenshot2.png)
 
 Generate a module named "chatgpt" in the "app/api/v1/endpoints" directory with root directory "project-root" and use it as a main program as well.
 
 ### Example 3
 
-[![Screenshot 3](images/screenshot3.png)](images/screenshot3.png)
+[![Screenshot 3](https://raw.githubusercontent.com/YashNarK/pymodulegen/main/images/screenshot3.png)](https://raw.githubusercontent.com/YashNarK/pymodulegen/main/images/screenshot3.png)
 
 Generate a package (with __init__.py) named "my_package" in the current directory (default settings) with a module my_module.
 
