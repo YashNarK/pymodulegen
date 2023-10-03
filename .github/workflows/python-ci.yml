@@ -38,5 +38,6 @@ jobs:
     - name: Test with unittest
       run: |
         ls
+        pwd
         python -m unittest discover -s tests
         working-directory: ${{ github.workspace }}
