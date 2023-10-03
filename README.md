@@ -42,6 +42,7 @@ Options:
 - `--directory`: (Optional) The directory where the module should be created.
 - `--root_directory`: (Optional) The root directory for sys.path.
 - `--is_module_only`: (Optional) Specify if the module should be used as a module only.
+- `--not_is_module_only`: (Optional) Specify if the module should be used as a main program as well
 
 ## Contributing
 
