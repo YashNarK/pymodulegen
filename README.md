@@ -1,6 +1,6 @@
 # pymodulegen
 [![Python unittests](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml/badge.svg)](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml)
-[![Version](https://img.shields.io/badge/version-0.0.6-blue)](https://github.com/YashNarK/pymodulegen/releases)
+[![Version](https://img.shields.io/badge/version-0.0.7-blue)](https://github.com/YashNarK/pymodulegen/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## Table of Contents
@@ -16,6 +16,50 @@
 ## Description
 
 pymodulegen is a project aimed to generate python modules and packages, and add root directory of the project in sys path to allow importing parent modules in child using absolute paths relative to root directory.
+
+## Issue Resolution
+
+This section outlines the types of issues and problems that our package, `pymodulegen`, is designed to address. If you encounter any of the following scenarios, our package can be a valuable solution:
+
+### Problem 1: Importing modules from parent packages
+
+Since Python 3.3, referencing or importing a module in the parent directory is not allowed. Hence, we must handle it manually.
+For example, in a folder structure like the one below,
+.
+    ├── directory_tree.txt
+    └── src
+        ├── main.py
+        └── api
+            ├── __init__.py
+            └── common
+                ├── load_environment.py
+                ├── __init__.py
+            └── v1
+                ├── __init__.py
+                └── endpoints
+                    ├── chat.py
+                    ├── __init__.py
+
+If you wish to import 'load_environment' into 'chat.py', you will get the following error:
+
+```chat.py:
+from src.api.common import load_environment
+```
+
+```Error:
+  File "your-machine-path\project-root\src\api\v1\endpoints\chat.py", line 1, in <module>
+    from src.api.common import load_environment
+ModuleNotFoundError: No module named 'src'
+```
+
+### Problem 2: Creating folder structures, packages and modules for a python project
+
+Currently, in Python development, we have to either manually create files and folders (along with __init__.py files) or use a third-party template provider like Cookiecutter, FastAPI Project Generator,Django-style CLI, etc. However, if you want to generate packages as per your liking in a custom fashion, it can only be done manually for the time being.
+
+## How Our Package Helps
+
+When we setup the folder structures using our package, it includes codes in the __init__.py file (or in the module itself, depending on the user preference), which will allow us to do imports using absolute paths (not relative paths, like the usage of '.','..') even from parent packages.
+Also, it is pretty easy to setup folder structures using our command-line tool rather than doing it manually.
 
 ## Installation
 
