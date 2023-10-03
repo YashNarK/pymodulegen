@@ -1,0 +1,24 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main  # Change this to the main branch name of your repository
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10.0
+
+    - name: Run tests
+      run: |
+        python -m unittest discover -s tests  # Replace this with the command to run your unittest tests
+      working-directory: .  # Adjust this to your project's directory structure
