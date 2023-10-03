@@ -25,6 +25,7 @@ This section outlines the types of issues and problems that our package, `pymodu
 
 Since Python 3.3, referencing or importing a module in the parent directory is not allowed. Hence, we must handle it manually.
 For example, in a folder structure like the one below,
+```
 .
     ├── directory_tree.txt
     └── src
@@ -40,13 +41,16 @@ For example, in a folder structure like the one below,
                     ├── chat.py
                     ├── __init__.py
 
-If you wish to import 'load_environment' into 'chat.py', you will get the following error:
-
-```chat.py:
-from src.api.common import load_environment
 ```
 
-```Error:
+If you wish to import 'load_environment' into 'chat.py', you will get the following error:
+
+chat.py:
+```
+from src.api.common import load_environment
+```
+Error:
+```
   File "your-machine-path\project-root\src\api\v1\endpoints\chat.py", line 1, in <module>
     from src.api.common import load_environment
 ModuleNotFoundError: No module named 'src'
