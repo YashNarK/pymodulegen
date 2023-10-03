@@ -1,5 +1,5 @@
 # pymodulegen
-[![Build Status](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml/badge.svg)](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml)
+[![Python unittests](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml/badge.svg)](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml)
 [![Version](https://img.shields.io/badge/version-0.0.4-blue)](https://github.com/YashNarK/pymodulegen/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
