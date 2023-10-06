@@ -1,6 +1,6 @@
 # pymodulegen
 [![Python unittests](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml/badge.svg)](https://github.com/YashNarK/pymodulegen/actions/workflows/python-ci.yml)
-[![Version](https://img.shields.io/badge/version-0.0.7-blue)](https://github.com/YashNarK/pymodulegen/releases)
+[![Version](https://img.shields.io/badge/version-0.0.8-blue)](https://github.com/YashNarK/pymodulegen/releases)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ## Table of Contents

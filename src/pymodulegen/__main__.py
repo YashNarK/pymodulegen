@@ -14,7 +14,8 @@ def set_root_directory(directory):
     """
     cmd = f"""import os, sys
 current_path = os.path.normpath(os.getcwd())
-root_path = os.path.join(current_path.split(os.sep + '{directory}')[0], '{directory}')"""
+root_path = os.path.join(current_path.split(os.sep + '{directory}')[0], '{directory}')
+sys.path.append(root_path)"""
     return cmd
 
 def generate_module(module_name,directory=".",root_directory=(os.getcwd().split(os.sep))[-1],is_module_only=True):
